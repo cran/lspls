@@ -1,5 +1,5 @@
 ### predict.lspls: predict method
-### $Id: predict.lspls.R 9 2005-12-22 13:01:36Z bhm $
+### $Id: predict.lspls.R 38 2009-07-18 12:19:18Z bhm $
 
 ## The plan:  Build up a new `predictors' by calculateing new
 ## scores, and use object$coefficients to get new predictions.
@@ -18,7 +18,7 @@ predict.lspls <- function(object, newdata, type = c("response", "scores"),
             .checkMFClasses(cl, mf)
     }
     matrices <- apply(attr(tt, "factors"), 2, function(x) mf[,which(x > 0)])
-    newX <- matrices[[1]]
+    newX <- as.matrix(matrices[[1]])
     newZ <- matrices[-1]
 
     ## Parametres:

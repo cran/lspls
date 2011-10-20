@@ -1,0 +1,28 @@
+## Exported functions:
+export(
+       lsplsCv,
+       lspls,
+       orthlsplsCv,
+       orthlspls.fit
+       )
+
+## Imports:
+## FIXME: more?
+importFrom(pls, MSEP, R2, RMSEP, scoreplot, loadingplot)
+importFrom(graphics, plot)
+importFrom(stats, predict)
+
+## S3 methods:
+S3method(MSEP, lsplsCv)
+S3method(R2, lsplsCv)
+S3method(RMSEP, lsplsCv)
+S3method(plot, lspls)
+S3method(plot, lsplsCv)
+S3method(scoreplot, lspls)
+S3method(loadingplot, lspls)
+S3method(predict, lspls)
+
+## Documented but not exported:
+## orth
+## project
+## Corth

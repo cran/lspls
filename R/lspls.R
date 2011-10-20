@@ -1,5 +1,5 @@
 ### lspls.R: The user interface function for fitting models
-### $Id: lspls.R 14 2006-01-05 10:26:41Z bhm $
+### $Id: lspls.R 39 2009-07-18 12:22:53Z bhm $
 
 lspls <- function(formula, ncomp, data, subset, na.action,
                   model = TRUE, ...)
@@ -25,7 +25,7 @@ lspls <- function(formula, ncomp, data, subset, na.action,
     }
     ## All the predictor matrices, in correct order:
     matrices <- apply(attr(mt, "factors"), 2, function(x) mf[,which(x > 0)])
-    X <- matrices[[1]]
+    X <- as.matrix(matrices[[1]])
     Z <- matrices[-1]
     ## Make sure ncomp is a list, and repeat it as needed:
     ncomp <- rep(as.list(ncomp), length = length(Z))
@@ -34,6 +34,7 @@ lspls <- function(formula, ncomp, data, subset, na.action,
     z <- orthlspls.fit(Y, X, Z, ncomp, ...)
     ## Build and return the object:
     class(z) <- "lspls"
+    z$fitted.values <- Y - z$residuals
     z$na.action <- attr(mf, "na.action")
     z$ncomp <- ncomp
     z$call <- match.call()
