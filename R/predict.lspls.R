@@ -1,5 +1,5 @@
 ### predict.lspls: predict method
-### $Id: predict.lspls.R 38 2009-07-18 12:19:18Z bhm $
+### $Id$
 
 ## The plan:  Build up a new `predictors' by calculateing new
 ## scores, and use object$coefficients to get new predictions.

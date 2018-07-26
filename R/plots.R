@@ -1,5 +1,5 @@
 ### plots.R:  Plot functions
-### $Id: plots.R 42 2009-11-15 16:23:01Z bhm $
+### $Id$
 
 ###
 ### Plot method for lspls objects

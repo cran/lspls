@@ -1,5 +1,5 @@
 ### MSEP.R: MSEP, RMSEP and R^2 functions.
-### $Id: MSEP.R 40 2009-07-20 16:37:35Z bhm $
+### $Id$
 
 
 ## MSEP takes a CV-object, and calculates the MSEP

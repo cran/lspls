@@ -1,4 +1,4 @@
-\encoding{latin1}
+\encoding{UTF-8}
 \name{predict.lspls}
 \alias{predict.lspls}
 \title{Predict Method for LS-PLS Models}
@@ -23,11 +23,11 @@
 %\details{
 %}
 \value{
-  When \code{type = "response"}, a matrix with predicted response values
-  is returned.  When \code{type = "scores"}, a matrix with predicted
+  If \code{type = "response"}, a matrix with predicted response values
+  is returned.  If \code{type = "scores"}, a matrix with predicted
   score values is returned.
 }
-\author{Bjørn-Helge Mevik}
+\author{BjÃ¸rn-Helge Mevik}
 \seealso{\code{\link{lspls}}}
 \examples{
 ##FIXME

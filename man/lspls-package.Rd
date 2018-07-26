@@ -1,22 +1,18 @@
-\encoding{latin1}
+\encoding{UTF-8}
 \name{lspls-package}
 \alias{lspls-package}
 \docType{package}
 \title{
-LS-PLS (Least Squares--Partial Least Squares) Models
+\packageTitle{lspls}
 }
 \description{
-Functions to fit and validate LS-PLS (least squares--partial least
-squares) models.  Includes predict and plot methods.
+\packageDescription{lspls}
 }
 \details{
-\tabular{ll}{
-Package: \tab lspls\cr
-Type: \tab Package\cr
-Version: \tab 0.1-1\cr
-Date: \tab 2007-04-18\cr
-License: \tab GPL version 2\cr
-}
+The DESCRIPTION file:
+\packageDESCRIPTION{lspls}
+\packageIndices{lspls}
+
 LS-PLS (least squares--partial least squares) models are written on the form
 \deqn{Y = X\beta + T_1\gamma_1 + \cdots + T_k\gamma_k + E,}{Y = X \beta + T1
   gamma1 + \dots + Tk gammak + E,}
@@ -44,8 +40,8 @@ usage to fit the model
   + W \theta + E}{Y = X\beta + Z gamma + V1:V2 eta + W theta + E}
 would be
 \preformatted{
-mod <- lspls(y ~ X + Z + V1:V2 + W, ncomp = list(3, c(2,1), 2),
-             data = mydata)
+  mod <- lspls(y ~ X + Z + V1:V2 + W, ncomp = list(3, c(2,1), 2),
+               data = mydata)
 }
 The first argument is the formula describing the model.
 \code{X} is fit first, using LS.  Then PLS scores from \code{Z}
@@ -63,16 +59,19 @@ implemented.  \code{plot(mod, "scores")} gives score plots for each PLS
 regression, and \code{plot(mod, "loadings")} gives loading plots.
 
 There is a \code{predict} method to predict response or score values
-from new data: \code{predict(mod, newdata = mynewdata)}.  (This predicts
-response values.  Use \code{type = "scores"} to get scores.)  Also, the
-standard functions \code{resid} and \code{fitted} can be used to extract
-the residuals and fitted values.
+from new data
+\preformatted{
+  predict(mod, newdata = mynewdata)
+}
+(This predicts response values.  Use \code{type = "scores"} to get
+scores.)  Also, the standard functions \code{resid} and \code{fitted}
+can be used to extract the residuals and fitted values.
 
 In order to determine the number of components to use from each matrix,
 one can use cross-validation:
 \preformatted{
-cvmod <- lsplsCv(y ~ X + Z + V1:V2 + W, ncomp = list(4, c(3,4), 3),
-                 segments = 12, data = mydata)
+  cvmod <- lsplsCv(y ~ X + Z + V1:V2 + W, ncomp = list(4, c(3,4), 3),
+                   segments = 12, data = mydata)
 }
 In \code{lsplsCv}, \code{ncomp} gives the maximal number of components to
 test.  The argument \code{segments} specifies the number of segments to
@@ -89,26 +88,26 @@ MSEP values explicitly, one can use the function \code{RMSEP} or
 \code{MSEP}.
 }
 \author{
-Bjørn-Helge Mevik
+\packageAuthor{lspls}
 
-Maintainer: Bjørn-Helge Mevik <bhx6@mevik.net>
+Maintainer: \packageMaintainer{lspls}
 }
 \references{
-  Jørgensen, K., Segtnan, V. H., Thyholt, K., Næs, T. (2004)  A
+  JÃ¸rgensen, K., Segtnan, V. H., Thyholt, K., NÃ¦s, T. (2004)  A
   Comparison of Methods for Analysing Regression Models with Both
   Spectral and Designed Variables.
   \emph{Journal of Chemometrics}, \bold{18}(10), 451--464.
 
-  Jørgensen, K., Mevik, B.-H., Næs, T.  Combining Designed Experiments
+  JÃ¸rgensen, K., Mevik, B.-H., NÃ¦s, T.  Combining Designed Experiments
   with Several Blocks of Spectroscopic Data.
   (Submitted)
 
-  Mevik, B.-H., Jørgensen, K., Måge, I., Næs, T.  LS-PLS: Combining
+  Mevik, B.-H., JÃ¸rgensen, K., MÃ¥ge, I., NÃ¦s, T.  LS-PLS: Combining
   Categorical Design Variables with Blocks of Spectroscopic
   Measurements.
   (Submitted)
 }
-\keyword{ package }
+\keyword{package}
 \keyword{multivariate}
 \keyword{regression}
 \seealso{

@@ -1,5 +1,5 @@
 ### lsplsCv.R: The user interface function for cross-validation
-### $Id: lsplsCv.R 36 2009-07-18 11:37:29Z bhm $
+### $Id$
 
 lsplsCv <- function(formula, ncomp, data, subset, na.action,
                     segments = 10, segment.type = c("random",

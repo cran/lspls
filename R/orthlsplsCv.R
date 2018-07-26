@@ -1,6 +1,6 @@
 ### orthlsplsCv.R: Cross-validation, orthogonalizing version
 ###
-### $Id: orthlsplsCv.R 35 2009-07-18 11:29:48Z bhm $
+### $Id$
 
 ## The algorithm is based on recursion, after X has been handled.
 

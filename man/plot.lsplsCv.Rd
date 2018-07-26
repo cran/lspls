@@ -1,4 +1,4 @@
-\encoding{latin1}
+\encoding{UTF-8}
 \name{plot.lsplsCv}
 \alias{plot.lsplsCv}
 \title{Plot Method for Cross-Validations}
@@ -42,10 +42,14 @@
   or R^2 for models with the first matrix, with the two first matrices,
   etc.  \code{ncomp} should be specified as when running \code{lsplsCv},
   and is used for selecting the number of components for each PLS
-  matrix.  For instance, if \code{mod <- lsplsCv(Y ~ X + Z + V:W, ...)},
-  then \code{plot(mod, ncomp = list(2, c(1,3)))} would plot the RMSEPs
-  for \code{Y ~ X}, \code{Y ~ X + Z} and \code{Y ~ X + Z + V:W}, using
-  2, 1 and 3 components for \code{Z}, \code{V} and \code{W}, respectively.
+  matrix.  For instance
+  \preformatted{
+    mod <- lsplsCv(Y ~ X + Z + V:W, ...)
+    plot(mod, ncomp = list(2, c(1,3)))
+  }
+  would plot the RMSEPs for \code{Y ~ X}, \code{Y ~ X + Z} and \code{Y ~
+  X + Z + V:W}, using 2, 1 and 3 components for \code{Z}, \code{V} and
+  \code{W}, respectively.
 
   If \code{separate} is \code{TRUE}, a separate plot panel is produced
   for each response.  Otherwise the measure is added for all responses
@@ -60,7 +64,7 @@
   The function returns whatever the (last) underlying plot function
   returns.
 }
-\author{Bjørn-Helge Mevik}
+\author{BjÃ¸rn-Helge Mevik}
 \seealso{\code{\link{lsplsCv}}, \code{\link{lspls}}}
 \examples{
 ##FIXME

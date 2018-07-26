@@ -1,4 +1,4 @@
-\encoding{latin1}
+\encoding{UTF-8}
 \name{projections}
 \alias{project}
 \alias{orth}
@@ -26,7 +26,7 @@ Corth(M, N)
   space of \code{N}: \eqn{M - N (N^t N)^{-1} N^t M}{M - N (N' N)^(-1) N' M}.
 
   \code{Corth(M, N)} calculates the coefficient matrix needed to
-  orthogonalise future matrices, i.e.,
+  orthogonalise future matrices, that is,
   \eqn{(N^t N)^{-1} N^t M}{(N' N)^(-1) N' M}.  Future
   matrices \code{m} and \code{n} can be orthogonalised with
   \code{m - n \%*\% Corth(M, N)}.
@@ -34,7 +34,7 @@ Corth(M, N)
 \value{
   A matrix.
 }
-\author{Bjørn-Helge Mevik}
+\author{BjÃ¸rn-Helge Mevik}
 \note{
   The functions need to be opitmised, both for speed and numerical
   accurracy.
@@ -45,3 +45,4 @@ Corth(M, N)
 ##FIXME
 }
 \keyword{algebra}
+%\keyword{internal}

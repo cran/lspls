@@ -1,5 +1,5 @@
 ### lspls.R: The user interface function for fitting models
-### $Id: lspls.R 39 2009-07-18 12:22:53Z bhm $
+### $Id$
 
 lspls <- function(formula, ncomp, data, subset, na.action,
                   model = TRUE, ...)
